@@ -1,0 +1,37 @@
+{
+  "name": "smart-table-events",
+  "version": "0.0.0",
+  "description": "tiny event emitter/listener",
+  "main": "dist/index.js",
+  "jsnext:main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "build:test": "rollup -c test/rollup.config.js",
+    "test": "npm run build:test && node test/dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smart-table/smart-table-events.git"
+  },
+  "keywords": [
+    "event",
+    "events",
+    "emitter",
+    "listener",
+    "smart-table"
+  ],
+  "author": "Laurent Renard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smart-table/smart-table-events/issues"
+  },
+  "homepage": "https://github.com/smart-table/smart-table-events#readme",
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "zora": "^0.3.0"
+  }
+}
