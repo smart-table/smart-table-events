@@ -1,5 +1,7 @@
 # smart-table-events
 
+[![CircleCI](https://circleci.com/gh/smart-table/smart-table-events.svg?style=svg)](https://circleci.com/gh/smart-table/smart-table-events)
+
 Tiny event emitter/event listener for nodejs and browsers. 
 
 ## Installation
