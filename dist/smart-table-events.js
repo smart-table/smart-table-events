@@ -1,4 +1,7 @@
-export function emitter() {
+var smartTableEvents = (function (exports) {
+'use strict';
+
+function emitter() {
 	const listenersLists = {};
 	const instance = {
 		on(event, ...listeners) {
@@ -25,7 +28,7 @@ export function emitter() {
 	return instance;
 }
 
-export const proxyListener = eventMap => ({emitter}) => {
+const proxyListener = eventMap => ({emitter}) => {
 	const proxy = {};
 	const eventListeners = {};
 
@@ -51,3 +54,11 @@ export const proxyListener = eventMap => ({emitter}) => {
 		}
 	});
 };
+
+exports.emitter = emitter;
+exports.proxyListener = proxyListener;
+
+return exports;
+
+}({}));
+//# sourceMappingURL=smart-table-events.js.map

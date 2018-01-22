@@ -2,16 +2,15 @@
   "name": "smart-table-events",
   "version": "1.0.2",
   "description": "tiny event emitter/listener",
-  "main": "dist/index.js",
+  "main": "dist/",
   "jsnext:main": "index.js",
-  "module": "index.js",
+  "module": "dist/index.mjs",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "build:test": "rollup -c test/rollup.config.js",
-    "test": "npm run build:test && node test/dist/index.js"
+    "test": "xo ./index.js && (cat ./node_modules/zora/dist/zora.js && rollup -f iife -n test ./test/index.js) | node | tap-diff"
   },
   "repository": {
     "type": "git",
@@ -31,8 +30,9 @@
   },
   "homepage": "https://github.com/smart-table/smart-table-events#readme",
   "devDependencies": {
-    "rollup": "^0.41.6",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "zora": "^0.3.0"
+    "rollup": "^0.54.1",
+    "tap-diff": "^0.1.1",
+    "xo": "^0.18.2",
+    "zora": "^1.1.6"
   }
 }

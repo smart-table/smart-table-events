@@ -2,7 +2,7 @@ import zora from 'zora';
 import {emitter, proxyListener} from '../index';
 
 export default zora()
-  .test('register a listener to an event', function * (t) {
+  .test('register a listener to an event', t => {
     let counter = 0;
     const listener = (increment) => {
       counter += increment
@@ -12,7 +12,7 @@ export default zora()
     em.dispatch('foo', 3);
     t.equal(counter, 3);
   })
-  .test('multiple listeners registered at once', function * (t) {
+  .test('multiple listeners registered at once', t => {
     let counter = 0;
     const firstListener = inc => {
       counter += inc
@@ -25,7 +25,7 @@ export default zora()
     em.dispatch('foo', 3);
     t.equal(counter, 9);
   })
-  .test('multiple listeners registered separately', function * (t) {
+  .test('multiple listeners registered separately', t => {
     let counter = 0;
     const firstListener = inc => {
       counter += inc
@@ -39,7 +39,7 @@ export default zora()
     em.dispatch('foo', 3);
     t.equal(counter, 9);
   })
-  .test('unregister specific listener', function * (t) {
+  .test('unregister specific listener', t => {
     let counter = 0;
     const firstListener = inc => {
       counter += inc
@@ -53,7 +53,7 @@ export default zora()
     em.dispatch('foo', 3);
     t.equal(counter, 3);
   })
-  .test('unregister all listeners of a given type', function * (t) {
+  .test('unregister all listeners of a given type', t => {
     let counter = 0;
     const firstListener = inc => {
       counter += inc
@@ -73,7 +73,7 @@ export default zora()
     em.dispatch('bar', 200);
     t.equal(counter, -200);
   })
-  .test('unregister all listeners', function * (t) {
+  .test('unregister all listeners', t => {
     let counter = 0;
     const firstListener = inc => {
       counter += inc
@@ -90,7 +90,7 @@ export default zora()
     em.dispatch('bar', 200);
     t.equal(counter, 0);
   })
-  .test('proxy: map event listeners to methods', function * (t) {
+  .test('proxy: map event listeners to methods', t => {
     let counter = 0;
     const em = emitter();
     const firstListener = inc => {
@@ -106,7 +106,7 @@ export default zora()
     em.dispatch('bar', 6);
     t.equal(counter, 14);
   })
-  .test('proxy: unregister event listeners on a specific event', function * (t) {
+  .test('proxy: unregister event listeners on a specific event', t => {
     let counter = 0;
     const em = emitter();
     const firstListener = inc => {
@@ -124,7 +124,7 @@ export default zora()
     em.dispatch('foo', 2);
     t.equal(counter, 6)
   })
-  .test('proxy: unregister all event listeners', function * (t) {
+  .test('proxy: unregister all event listeners', t => {
     let counter = 0;
     const em = emitter();
     const firstListener = inc => {

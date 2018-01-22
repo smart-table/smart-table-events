@@ -1,8 +1,8 @@
-const node = require('rollup-plugin-node-resolve');
 module.exports = {
-  entry: './index.js',
-  dest: './dist/index.js',
-  format: 'umd',
-  plugins: [node({jsnext: true})],
-  moduleName: 'smart-table-events'
+	input: './index.js',
+	output: [
+		{format: 'es', file: './dist/index.mjs'},
+		{format: 'cjs', file: './dist/index.js'},
+		{format: 'iife', name: 'smartTableEvents', file: './dist/smart-table-events.js', sourcemap: true}
+	],
 };

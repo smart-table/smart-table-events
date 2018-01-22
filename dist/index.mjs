@@ -1,4 +1,4 @@
-export function emitter() {
+function emitter() {
 	const listenersLists = {};
 	const instance = {
 		on(event, ...listeners) {
@@ -25,7 +25,7 @@ export function emitter() {
 	return instance;
 }
 
-export const proxyListener = eventMap => ({emitter}) => {
+const proxyListener = eventMap => ({emitter}) => {
 	const proxy = {};
 	const eventListeners = {};
 
@@ -51,3 +51,5 @@ export const proxyListener = eventMap => ({emitter}) => {
 		}
 	});
 };
+
+export { emitter, proxyListener };
