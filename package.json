@@ -1,6 +1,6 @@
 {
   "name": "smart-table-events",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "tiny event emitter/listener",
   "main": "dist/",
   "jsnext:main": "index.js",
