@@ -1,6 +1,6 @@
 {
   "name": "smart-table-events",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "tiny event emitter/listener",
   "main": "./dist/bundle/index",
   "module": "./dist/bundle/index.mjs",
