@@ -1,4 +1,4 @@
-interface Emitter {
+export interface Emitter {
     on(event: string, ...listeners: Function[]): Emitter;
 
     dispatch(event: string, ...args: any[]);
@@ -37,7 +37,7 @@ interface EventMap {
     [key: string]: string;
 }
 
-interface ProxyEmitter {
+export interface ProxyEmitter {
     off(ev: string): ProxyEmitter;
 }
 
