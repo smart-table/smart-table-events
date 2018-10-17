@@ -1,9 +1,9 @@
 {
   "name": "smart-table-events",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "tiny event emitter/listener",
   "main": "./dist/bundle/index",
-  "module": "./dist/bundle/index.mjs",
+  "module": "./dist/src/index.js",
   "typings": "./dist/src/index.ts",
   "directories": {
     "test": "test"
@@ -20,8 +20,8 @@
     "type": "git",
     "url": "git+https://github.com/smart-table/smart-table-events.git"
   },
-  "files":[
-    "dist/**/*"
+  "files": [
+    "dist"
   ],
   "keywords": [
     "event",
