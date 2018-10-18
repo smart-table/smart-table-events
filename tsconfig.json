@@ -7,6 +7,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "noImplicitAny": false,
+    "declaration": true,
     "preserveConstEnums": true,
     "target": "es2017"
   },
