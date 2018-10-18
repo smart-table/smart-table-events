@@ -1,10 +1,10 @@
 {
   "name": "smart-table-events",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "tiny event emitter/listener",
   "main": "./dist/bundle/index",
   "module": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/declarations/index.d.ts",
   "directories": {
     "test": "test"
   },
