@@ -1,5 +1,5 @@
 import test from 'zora';
-import {emitter, proxyListener} from '../dist/src';
+import {emitter, proxyListener} from '../dist/bundle/module';
 
 test('register a listener to an event', t => {
     let counter = 0;
