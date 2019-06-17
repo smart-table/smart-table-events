@@ -1,4 +1,4 @@
-import test from 'zora';
+import {test} from 'zora';
 import {emitter, proxyListener} from '../dist/bundle/module';
 
 test('register a listener to an event', t => {
